@@ -1,0 +1,255 @@
+{"intents": [
+        {"tag": "kurs",
+         "patterns": ["Wie teuer ist der Kurs"],
+         "responses": ["Der Kurs kostet 299€"],
+         "context": [""]
+        },
+        {"tag": "prüfung",
+         "patterns": ["Wie teuer ist die Prüfung"],
+         "responses": ["Die Prüfung kostet 100€"],
+         "context": [""]
+        },
+        {"tag": "noanswer",
+         "patterns": [""],
+         "responses": ["Ich verstehe deine Frage leider nicht.", "Entschuldige bitte, ich habe deine Frage nicht verstanden.", "Ich bin nicht so sicher, ob ich dich richtig verstanden habe.","Leider kann ich nicht verstehen, was du von mir möchtest.","Kannst du das noch mal anders formulieren"],
+         "context": [""]
+        },
+        {"tag": "beibringen",
+         "patterns": ["Wie werden die Kurse für SAP uns beigebracht","Wie wird uns das beigebracht "],
+         "responses": ["Alle Kurse basieren auf unserer einzigartigen E-Learning-Plattform mit der Sie lernen können"],
+         "context": [""]
+        },
+        {"tag": "anwesend",
+         "patterns": [" Muss man anwesend sein"],
+         "responses": ["Da alle Kurse auf E-Learning-Plattform basieren ist keine Anwesenheit nötig"],
+         "context": [""]
+        },
+        {"tag": "Frist",
+         "patterns": ["Gibt es bestimmt Fristen, wann welche Aufgaben erledigt werden müssen","Gibt es bestimmt Fristen, wann welche Aufgaben erledigt werden müssen","Gibt es bestimmt Fristen, wann man welche Aufgaben erledigt werden müsse" ],
+         "responses": ["Sie können lernen wann immer Sie wollen."],
+         "context": [""]
+        },
+        {"tag":"verschieden",
+        "patterns": ["Was ist TS410 für SAP Anwender und Berater", " Worum geht es bei dem Kurs TS410 für SAP Anwender und Berater"],
+        "responses":["Dieser Lehrgang vermittelt das Kernwissen über Geschäftsprozesse und deren Integration in SAP S/4HANA.  Nach diesem Lehrgang können Sie die grundlegenden Geschäftsprozesse Order to Cash, Procure to Pay und Plan to Produce und deren Integrationsaspekte innerhalb von SAP S/4HANA erklären und wissen wie Financial Accounting, Management Accounting, Inventory Management, Project Management, Enterprise Asset Management, Customer Service und Human Capital Management in diese Prozesse integriert sind."],
+        "context": [""]
+        },
+        {"tag":"TAW12",
+        "patterns": ["Was ist TAW12  für SAP Entwickler", " Worum geht es bei dem TAW12 für SAP Entwickler"],
+        "responses":["Der Kurs zum SAP Anwendungsentwickler mit ABAP gibt Ihnen die Fähigkeiten mit der SAP®- eigenen Programmiersprache ABAP zu arbeiten. Das Ziel dieses Lehrgangs ist die fundierte Ausbildung in den grundlegenden Themenbereichen, Datenbankentwicklung,  Entwicklung von ABAP-Reports bis hin zu ABAP-Objects. Ein hoher Anteil praktischer Übungen direkt am SAP S/4HANA-Systems zusammen mit unserem E-Learning Angebot ermöglicht Ihnen das erworbenes Wissen effektiv zu nutzen."],
+        "context": [""]
+
+        },
+
+        {"tag": "gruß",
+         "patterns": ["Hi Hallo Guten Tag"],
+         "responses": ["ja hallo", "hallöchen", "Ich grüße dich", "Hallo", "Guten Tag"],
+         "context": [""]
+        },
+        {"tag":"SAP Analyst",
+        "patterns":["Wird der Kurs SAP Analyst auch angeboten", " Gibt es den Kurs SAP Analyst"],
+        "responses":["Der Kurs steht bald zur Verfügung"],
+        "context": [""]
+        },
+        {"tag":"Aufbau der Kurs",
+        "patterns":["Aus wie vielen Teilen besteht ein einzelner Kurs", " Wie sind die Kurse aufgebaut"],
+        "responses":["Die Kurse bestehen aus:Theoretische Inhalte, Praktische Inhalte,Durchführung am System"],
+        "context": [""]
+        },
+        {"tag":"anrechnen",
+        "patterns":["Sind die SAP Kurse anrechenbar", "Sind die Kurse anrechenbar", "Kann man das anrechnen lassen","Bekommt man Credit Punkte für die Teilnahme an den Kurs","Wieviel Credit Punkte werden im Studium angerechnet durch den Kurs"],
+        "responses":["Dazu sind uns folgende Regelungen bekannt:An der Universität Duisburg-Essen: Ja, hier können generell die SAP-Kurse angerechnet werden. Beispielsweise im Bachelor Wirtschaftsinformatik mit 3CP und im Master mit 6CP als E-Kurs.An anderen Universitäten: Ja, generell ist eine Anrechnung möglich. Bitte sprechen Sie aber Ihr zuständiges Prüfungsamt an und fragen Sie nach. Im Zweifelsfall verweisen Sie bitte auf uns."],
+        "context": [""]
+        },
+        {"tag":"Preis Kurs",
+        "patterns":["Wie viel Kostet die Belegung eines SAP Kurses", "Wie viel kostet ein Kurs", "Wo liegen die Preise für ein SAP Kurs"],
+        "responses":["Das Zertifikat der Universität Duisburg-Essen 'TS410 E- Learning', kostet 299 EuroZertifikat der SAP zusätzlich 'TS410 SAP Beraterzertifikat', kostet 399 Euro"],
+        "context": [""]
+        },
+        {"tag":"299-399",
+        "patterns":["Wo liegt der Unterschied zwischen dem Kurs für 299 Euro und 399 Euro"],
+        "responses":["Der Unterschied liegt darin das sie bei Kurs TS410 E-Learning für 299 Euro eine Teilnahmebestätigung der Universität erhalten. Beim Beraterzertifikat erhalten sie sowohl eine Teilnahmebestätigung der Universität als auch ein Offizielles Zertifikat der SAP SE."],
+        "context": [""]
+        },
+        {"tag":"E-Learning",
+        "patterns":["Wie ist ein E-Learning Kurs aufgebaut", " was beinhaltet ein E-Learning Kurs an der Universität"],
+        "responses":["Kostet: 399 Euro. Offizielles Zertifikat der SAP SE, Theoretische Inhalte, Praktische Inhalte, Durchführung am System, Teilnahmebestätigung der Universität, Anrechenbar im Studium (je nach Universität)"],
+        "context": [""]
+        },
+        {"tag":"einschreiben",
+        "patterns":["Wo muss man sich einschreiben", "Wo muss man sich anmelden", "Wie schreibt man sich für einen Kurs ein", " Wie meldet man sich an"],
+        "responses":["Auf unserer Homepage https://es4students.de  können sie Unter dem Register Kurse alle Informationen zu den Kursen und den jeweiligen Kosten finden. Nach dem sie sich entschieden haben für welchen Kurs, finden sie auch direkt den Link zu Einschreibung"],
+        "context": [""]
+        },
+        {"tag":"belegen",
+        "patterns":["Kann man einen SAP Kurs Jeden Semesters belegen", " Kann man einen Kurs Jeden Semesters belegen", " Wann kann man sich für ein Kurs anmelden", " Wann kann man sich für ein Kurs einschreiben"],
+        "responses":["Eine Einschreibung für ein SAP Kurs ist in jeden Semestern möglich."],
+        "context": [""]
+        },
+        {"tag":"Zertifikat Kosten",
+        "patterns":["Entstehen durch das SAP Zertifikat weitere Kosten", " Wie teuer ist die SAP Zertifizierung", " Muss für die Prüfung etwas zusätzlich gezahlt werden"],
+        "responses":["Ja, die Prüfung kostet bei einer Buchung über ES4Students nur 100€ zusätzlich."],
+        "context": [""]
+        },
+        {"tag":"Prüfung ablegen",
+        "patterns":["Muss ich eine Prüfung ablegen", "Muss ich für das SAP Zertifikat eine Prüfung ablegen"],
+        "responses":["Ja. Dies geschieht online und wird von der SAP SE selber organisiert.  Am Ende bekommst du die Originale Zertifizierung der SAP."],
+        "context": [""]
+        },
+        {"tag":"Ziel",
+        "patterns":["Was ist das Ziel des Kurses", " Ist der Kurs für mich geeignet", "Für wen ist der Kurs geeignet", " Für wen ist der Kurs relevant"],
+        "responses":["Das Ziel des Kurses „SAP Beraterzertifikat TS410“ ist es das grundlegende Wissen des ERP-Systems SAP S4/HANA zu erlernen. Dazu gehört das grundlegende Verständnis wie das System zu bedienen ist, die Grundkonzepte der SAP hinter dem System und die wichtigsten Standardprozesse und -prozessbereiche. Diese sind für viele Branchen anwendbar."],
+        "context": [""]
+        },
+        {"tag":"Prüfung Zeit",
+        "patterns":["Wo findet die Prüfung statt","Wann findet die Prüfung statt","Wann ist die Prüfung "],
+        "responses":["Die Prüfung können sie jeder Zeit und an jedem beliebigen Ort mit einer sicheren Internetverbindung ablegen. Sie findet also genau wie der von ihnen besuchte Kurs an einem beliebigen PC und online statt."],
+        "context": [""]
+        },
+        {"tag":"Kurs belegen",
+        "patterns":["Wird der SAP Kurs jedes Semester angeboten","Wann findet der Kurs statt","Was sind die Kurslaufzeiten","Wie lange läuft der Kurs"],
+        "responses":["Der TS410-Kurs wird jedes Semester angeboten. Die jeweiligen Kurslaufzeiten finden Sie auf unserer Webseite."],
+        "context": [""]
+        },
+        {"tag":"„TERP 10“ oder „TERP 10 on Hana",
+        "patterns":["Wo ist der Unterschied zu „TERP 10“ oder „TERP 10 on Hana"],
+        "responses":["Das Zertifikat TERP10  bieten wir leider nicht an, da es für Studierende keinen Grund gibt sich für ein bereits auslaufendes Produkt zu zertifizieren. In etwa 5 Jahren wird die alte Business Suite (TERP10) von der SAP nicht mehr unterstützt:https://www.silicon.de/41604643/sap-sichert-mainstream-support-fuer-business-suite-bis-2025-zu . Das Zertifikat “TERP10 on HANA” existiert bei der SAP in der Form gar nicht und ist eigentlich nur das veraltete Zertifikat mit einem schönen Marketingnamen versehen. Daher können wir nur dazu raten eine Prüfung für das neuere Zertifikat (TS410) abzulegen, wenn Sie nach dem Studium dieses dem Lebenslauf beilegen wollen!"],
+        "context": [""]
+        },
+        {"tag":"weitere Kosten",
+        "patterns":["Fallen neben den 399 Euros weitere Kosten an"],
+        "responses":["Nein. Im Gegensatz zu anderen Anbietern fallen zu den 399€ keine weiteren Kosten bei an. Als Teil der Universität Duisburg-Essen wollen wir den Kurs zum Selbstkostenpreis anbieten und finden es nicht fair für eine Prüfungsleistung der SAP noch eine Art Vermittlungsgebühr aufzuschlagen. Es geht bei uns sogar noch günstiger, denn für 299€ kann man den Kurs mit nur einem Zertifikat von ES/4Students ablegen."],
+        "context": [""]
+        },
+        {"tag":"Vorkenntnisse",
+        "patterns":["Ist der Kurs für Fachfremde interessant","Braucht man Vorkenntnisse","Ist der Kurs für Einsteiger geeignet"],
+        "responses":["Wenn Sie sich unsicher sind, ob ihre Vorkenntnisse ausreichen, halten Sie am besten Rücksprache mit der Programmleitung. Generell ist der Kurs für die TS410 für SAP “Einsteiger” gedacht und bildet eine solide Grundlage für weitere Zertifizierungen."],
+        "context": [""]
+        },
+        {"tag":"Voraussetzung",
+        "patterns":["Wer darf an den Kurs teilnehmen","Dürfen nicht-studierende teilnehmen","Ich studiere nicht bzw. habe mein Studium abgeschlossen – Was jetzt"],
+        "responses":["An unserem Kurs dürfen nur ordentlich eingeschriebene Studierende teilnehmen. Das gilt auch für Gast- und ZweithörerInnen sowie Akademiestudierende. Wir können, aufgrund der Regeln der SAP UA, nur eingeschriebene Studierende für das Programm zulassen, daher benötigen Sie auch dringend eine aktuelle Studienbescheinigung. Ohne diese müssen wir Ihre Anmeldung leider stornieren. Die Kopie eines Studierendenausweises alleine reicht auch nicht aus.Falls Sie nicht mehr studieren und trotzdem Interesse am SAP-Kurs haben, besuchen Sie bitte die Website der SAP Education https://training.sap.com/"],
+        "context": [""]
+        },
+        {"tag":"Präsenzschulungen",
+        "patterns":["Werden auch Präsenzschulungen angeboten","Werden auch Präsenzveranstaltungen angeboten"],
+        "responses":["Nein, ES4Students bietet reine E-Learningkurse an.Für Präsenzveranstaltungen bietet die SAP-Education viele Angebote: https://training.sap.com/"],
+        "context": [""]
+        },
+        {"tag":"Auslandsemester",
+        "patterns":["Ich mache gerade ein Auslandsemester – kann ich trotzdem am Kurs teilnehmen"],
+        "responses":["Ja, das ist möglich. Du musst bei der Anmeldung einzig deine Heimuniversität angeben und uns zusätzlich zu deiner Studienbescheinigung der Heimuniversität auch den der Gastuniversität zu schicken."],
+        "context": [""]
+        },
+        {"tag":"Ratenzahlung",
+        "patterns":["Kann man in Raten zahlen","Ist eine Ratenzahlung Möglich"],
+        "responses":["Nein, allerdings bieten wir den Kurs (und bald auch weitere) jedes Semester an, um euch entgegenzukommen."],
+        "context": [""]
+        },
+        {"tag":"Stundenplan",
+        "patterns":["Wieviel Stunden sollte man für die Bearbeitung des Kurses TS410 ca. einplanen","Wie oft sollte man sich mit dem Kurs befassen","Was ist der Workload für diesen Kurs","Wie lange dauert der Kurs","Wie viel Zeit muss ich Investieren","Wie viel Zeit nimmt ein Kurs in Anspruch"],
+        "responses":["Für die Bearbeitung des Kurses und der Vorbereitung zur Prüfung der SAP sind insgesamt 180 Stunden Workload geplant. Dies entspricht einem Kurs von 6 Credit Points.Da die Zeiteinteilung von den Teilnehmern selbst vorgenommen wird, können die geleisteten Stunden pro Woche variabel gestaltet werden"],
+        "context": [""]
+        },
+        {"tag":"Prüfungsvorbereitung",
+        "patterns":["Wie soll ich mich auf Prüfung vorbereiten?","Wie bereite ich mich auf Zertifikatsprüfung vor"],
+        "responses":["Der theoretische Teil bereitet inhaltlich und thematische auf die Prüfung vor. Es wird keine Zusatzliteratur benötigt.Zu Beginn eines jeden Kapitels wird zunächst der theoretische Teil dargestellt, welcher für die Prüfung relevant ist. Anschließend folgen praxisorientierte Fallstudien die erfolgreich für die das Hochschulzertifikat zu bearbeiten sind. Die Summe aller Theorie-Kapitel ist für die Klausur zu lernen."],
+        "context": [""]
+        },
+        {"tag":"späteren Zeitpunkt für Prüfung",
+        "patterns":["Kann ich die Prüfung auch zu einem späteren Zeitpunkt ablegen"],
+        "responses":["Studierende können die Prüfung getrennt vom Kurs auch zu einem späteren Zeitpunkt durchführen. "],
+        "context": [""]
+        },
+        {"tag":"wie oft Prüfung",
+        "patterns":["Wie oft darf ich die Prüfung ablegen","Was passiert wenn ich durch die Zertifizierungsprüfung falle"],
+        "responses":["Du darfst die Prüfung 2 Mal wiederholen, dich also drei Mal prüfen lassen. Wenn du die Prüfung wieder über uns belegst, musst du selbstverständlich nur den Prüfungsbeitrag zahlen, Bedingung ist jedoch, dass du auch zu diesem Zeitpunkt noch im Studium bist."],
+        "context": [""]
+        },
+        {"tag":"Note",
+        "patterns":["Bekomme ich für den Kurs eine Note"],
+        "responses":["Nein, du erhältst bei vollständiger Bearbeitung aller Fallstudien ein Teilnahmezertifikat und bei Bestehen der TS410 Prüfung ein SAP-Beraterzertifikat."],
+        "context": [""]
+        },
+        {"tag":"SAP-Weiterbildung",
+        "patterns":["Wie funktioniert die SAP-Weiterbildung","Wie funktioniert der Kurs"],
+        "responses":["Der SAP-Kurs findet in Form eines innovativen E-Learnings statt"],
+        "context": [""]
+        },
+        {"tag":"Smartphone",
+        "patterns":["Kann ich für den Kurs mein Smartphone nutzen","Kann ich für den Kurs mein Handy benutzen","Kann ich auch ohne Computer den Kurs absolvieren","Kann ich auch ohne Laptop den Kurs absolvieren"],
+        "responses":["Sie können die Aufgaben des Kurses sind über Ihr Smartphone sowie über den Webbrowser Ihres PCs/Laptops bearbeiten"],
+        "context": [""]
+        },
+        {"tag":"zuhause",
+        "patterns":["Muss ich in der Universität sein, um die Aufgaben des Kurses bearbeiten zu können","Kann ich die Aufgaben von zu Hause aus bearbeiten"],
+        "responses":["Sie können die Aufgaben zeitunabhängig bearbeiten, da es sich bei dem SAP-Kurs um E-Learning handelt. Bitte beachten Sie jedoch Fristen für bestimmte Aufgaben"],
+        "context": [""]
+        },
+        {"tag":"Wer",
+        "patterns":["Wer bietet diesen/den (SAP)-Kurs an"],
+        "responses":["Der Kurs wird von Universität Duisburg-Essen in Zusammenarbeit mit der SAP University Alliances angeboten"],
+        "context": [""]
+        },
+        {"tag":"Beraterzertifikat",
+        "patterns":["Wie lautet das Beraterzertifikat","Wie heißt das Beraterzertifikat"],
+        "responses":["Das Beraterzertifikat heißt „TS410“ (SAP S/4HANA)"],
+        "context": [""]
+        },
+        {"tag":"Kursdauer",
+        "patterns":["„Wie ist die Kurslaufzeit","Wann fängt der Kurs an","Wann endet der Kurs","Wie lange dauert der Kurs","Wie lange geht der Kurs","Wann findet der Kurs statt","Wann ist der Kurszeitraum","An welchem Tag fängt der Kurs an","An welchem Tag endet der Kurs"],
+        "responses":["Die aktuelle Kurslaufzeit lautet: 02.05.2019 bis 31.08.2019. So entstehen keine Überschneidungen mit den anderen Kursen der Universitäten!"],
+        "context": [""]
+        },
+        {"tag":"Einschreibungszeitraum",
+        "patterns":["Wann endet der Einschreibungszeitraum/die Einschreibungsphase","Wie lange ist der Einschreibungszeitraum/die Einschreibungsphase","An welchem Tag endet der Einschreibungszeitraum/die Einschreibungsphase"],
+        "responses":["Der Zeitraum zur Einschreibung endet am: 20.06.2019.“"],
+        "context": [""]
+        },
+        {"tag":"Bereichen",
+        "patterns":["In welchen Bereichen bieten Sie Kurse an","Bieten Sie weitere Kurse an","Was gibt es noch für Kurse","Wie sind die Karriereoptionen","Welche Karriereoptionen bieten Sie","Welche Karriereoptionen sind möglich"],
+        "responses":["Wir bieten eine breite Anzahl an Kursen an, die Sie auf Ihren beruflichen Weg zu einem SAP Anwender, SAP Berater, SAP Entwickler und SAP Analyst unterstützen"],
+        "context": [""]
+        },
+        {"tag":"Zertifikat anerkannt",
+        "patterns":["Ist das Zertifikat offiziell","Wird das Zertifikat anerkannt","Ist das Zertifikat gültig"],
+        "responses":["Es handelt sich um ein offizielles und anerkanntes Beraterzertifikat der SAP SE und der Universität Duisburg-Essen."],
+        "context": [""]
+        },
+        {"tag":"Grund den Kurs zu machen",
+        "patterns":["Warum sollte ich den Kurs machen","Warum sollte ich den Kurs belegen","Warum sollte ich den Kurs bei Ihnen absolvieren","Was spricht für den Kurs"],
+        "responses":["Mit der erfolgreichen Teilnahme am Kurs erhalten sie ein offizielles und anerkanntes Beraterzertifikat von uns, welches sehr gut für Ihre berufliche Laufbahn sein wird. Wir haben 20-jährige Erfahrung mit den größten SAP-Projekten und stellen neueste Zertifikate, die ständig weiterentwickelt werden."],
+        "context": [""]
+        },
+        {"tag":"Partner von SAP Kurs",
+        "patterns":["Wer sind Ihre (Projekt)Partner","Wie heißen Ihre Partner","Mit wem arbeiten Sie zusammen","Wer arbeitet alles am Projekt"],
+        "responses":["Die Projektpartner sind: SAP University Alliances, SAP next-gen, Universität Duisburg-Essen, und IS Lehrstuhl für Wirtschaftsinformatik und integrierte Informationssysteme"],
+        "context": [""]
+        },
+        {"tag":"aktuell",
+        "patterns":["Ist der Kurs aktuell","Ist der Kurs alt","Sind die Inhalte des Kurses aktuell","Gibt es jedes Jahr neue Kurse","Verändert sich der Kurs","Bleiben die Inhalte des Kurses gleich"],
+        "responses":["Durch unsere Nähe zur Forschung im Umfeld von Enterprise Systems und der Entwicklung der SAP halten wir unsere Kurse stetig aktuell"],
+        "context": [""]
+        },
+        {"tag":"Unterschied Beraterzertifizierung und Ohne",
+        "patterns":["Wo liegt der Unterschied zwischen dem Kurs mit Beraterzertifizierung und Ohne","Wo liegt der Unterschied zwischen dem Kurs mit Beraterzertifizierung und dem normalen E-Learning Kurs"],
+        "responses":["Der Unterschied liegt darin, dass Sie bei Kurs TS410 E-Learning für 299 Euro eine Teilnahmebestätigung der Universität erhalten. Beim Beraterzertifikat erhalten sie sowohl eine Teilnahmebestätigung der Universität als auch ein Offizielles Zertifikat der SAP SE."],
+        "context": [""]
+        },
+        {"tag":"SAP S/HANA",
+        "patterns":["Was genau ist SAP S/HANA","Was ist SAP S/HANA"," Was ist SAP HANA","Worum geht es bei SAP S/HANA","Worum geht es bei SAP HANA"],
+        "responses":["SAP S/4HANA ist das ERP-System von SAP für Großunternehmen. Es ist der Nachfolger von SAP R/3 und SAP ERP und ist für die In-Memory-Datenbank SAP HANA von SAP optimiert. Das Angebot ist ein Enterprise Resource Planning-Softwarepaket, das alle täglichen Prozesse eines Unternehmens (z.B. Order-to-Cash, Procure-to-Pay, Plan-to-Product und Request-to-Service) und Kernfunktionen abdecken soll. Es integriert Funktionen aus Branchen sowie Branchenlösungen und integriert auch Teile von Produkten der SAP Business Suite wie SAP SRM, SAP CRM und SAP SCM neu. Die SAP Business Suite 4 läuft jedoch nur auf der SAP HANA-Datenbank und ist daher als ein Produkt verpackt: SAP S/4HANA. Die klassische R3-, ERP- und ECC-basierte Business-Suite von SAP und verwandte Produkte wurden für den Einsatz auf mehreren Datenbankplattformen entwickelt, darunter Oracle, Microsoft und IBM."],
+        "context": [""]
+        },
+        {"tag":"Beraterzertifikat",
+        "patterns":["Wann bekommt man die SAP TS410-Beraterzertifizierung","Wann bekommt man das Beraterzertifikat","Wann erhalte ich die SAP TS410-Beraterzertifizierung"],
+        "responses":["Im Anschluss an den Kurs mit einer Teilnahmebestätigung von es/4students besteht die Möglichkeit eine offizielle Beraterprüfung bei der SAP SE zu absolvieren. Bei Bestehen dieser Prüfung wird dir zusätzlich das wird das offizielle und weltweit anerkannte Zertifikat C_TS410_1610: „SAP Certified Application Associate – Business Process Integration with SAP S/4HANA“ verliehen. Die Prüfung dazu findet ganz einfach online statt, keine lästigen Termine, keine Anreise oder Stress."],
+        "context": [""]
+        },
+        {"tag":"None",
+        "patterns":[],
+        "responses":[],
+        "context": [""]
+        }
+   ]
+}

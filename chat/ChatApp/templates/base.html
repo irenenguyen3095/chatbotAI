@@ -1,0 +1,25 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta  charset="UTF-8">
+
+<!--Call css libraries -->
+	<link rel="stylesheet" type="text/css" href="{% static 'ChatApp/css/bootstrap.min.css'%}">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'ChatApp/css/bttn.min.css'%}">
+  	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  	<link rel="stylesheet" type="text/css" href="{% static 'ChatApp/css/chat.css'%}">
+
+<!-- Core files -->
+	<script src="{% static 'ChatApp/js/jquery-3.4.1.min.js'%}"></script>
+	<script src="{% static 'ChatApp/js/materialize.min.js'%}"></script>
+
+</head>
+<body>
+	{% block content %}
+	{% endblock content %}
+	{% block js %}
+	{% endblock js %}
+</body>

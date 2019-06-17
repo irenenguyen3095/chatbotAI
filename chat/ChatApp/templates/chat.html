@@ -1,0 +1,183 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class='headerContainer' >
+  <h4 class="text-center">Chatbot</h4> 
+    <img src='https://static.wiwi.uni-due.de/user-upload/iis-logo.png' style="height:45px;width:40px; display: inline-block;"/>
+</div>
+
+<div class= "chatContainer">
+  <ul class="msgList" id="msg-list">
+    <li class="recived">
+      <div class="avatar">
+        <img alt="Avatar" src="https://static.wiwi.uni-due.de/user-upload/iis-logo.png">
+      </div>
+      <div class="chat-body">
+        <div class="chat-message">Hallo ich bin chatbot</div>
+      </div>
+    </li>
+  </ul>
+
+<form  class= "classform" method ="POST" action = {%url 'chat'%} id = "Chatform" >
+  {% csrf_token %}
+    <div class="bottom_container clearfix">
+      <div class="message_container">
+        <input name="mesbox" id = "chat-msg" type="text" placeholder="Deine Frage hier eingeben!" class="message_input effect" autocomplete="off">
+          <span class="focus-border"></span>
+      </div>
+        <button type = "submit" class="sendmess bttn-pill bttn-md bttn-primary">SEND</button>
+    </div>
+</form>
+
+</div>
+
+{% endblock content %}
+{% block js %}
+
+<script type="text/javascript">
+  $(document).ready(function() {
+
+ 
+  var product= $(".classform")
+  product.submit(function(event){
+  event.preventDefault();
+  
+  var thisform= $(this)
+  var actionEndpoint=thisform.attr("action");
+  var httpMethod=thisform.attr("method");
+  var formData= thisform.serialize();
+  var data= { 'msgbox' : $('#chat-msg').val() }
+  console.log(thisform.attr("action"), thisform.attr("method"), formData, data)
+            
+  $.ajax({
+      url:actionEndpoint,
+      method:httpMethod,
+      data:{ 'msgbox' : $('#chat-msg').val() },
+      success: function(response){
+        if($('#chat-msg').val()==""){
+          $('#msg-list').append('<div id="alert1" class="alert alert-success">Bitte deine Frage eingeben!</div>');
+        }
+        else{
+        if(response.rep.length >200){
+          rep1='<li class="recived"><div class="avatar"><img alt="Avatar" src="https://static.wiwi.uni-due.de/user-upload/iis-logo.png"></div><div class="chat-body"><div class="chat-message hover">'+response.rep+'</div</li>';
+        }
+        else{
+          rep1='<li class="recived"><div class="avatar"><img alt="Avatar" src="https://static.wiwi.uni-due.de/user-upload/iis-logo.png"></div><div class="chat-body"><div class="chat-message">'+response.rep+'</div></div></li>';
+        }
+        console.log("success")
+        console.log(response)
+        $('#msg-list').append('<li class="sent"><div class="avatar2"><img alt="Avatar" src="https://image.flaticon.com/icons/svg/260/260253.svg"></div><div class="chat-body"><div class="chat-message">'+response.msg+'</div></div></li>');
+        if (response.rep2 ==null){
+          $('#msg-list').append(rep1);
+        }
+        else{
+          if (response.rep2.length>200)
+          {
+          rep2='<li class="recived"><div class="avatar"><img alt="Avatar" src="https://static.wiwi.uni-due.de/user-upload/iis-logo.png"></div><div class="chat-body"><div class="chat-message hover">'+response.rep2+'</div></div></li>';
+          }
+          else
+          {
+            rep2='<li class="recived"><div class="avatar"><img alt="Avatar" src="https://static.wiwi.uni-due.de/user-upload/iis-logo.png"></div><div class="chat-body"><div class="chat-message">'+response.rep2+'</div></div></li>';
+          }
+          $('#msg-list').append('<li class="recived"><div class="avatar"><img alt="Avatar" src="https://static.wiwi.uni-due.de/user-upload/iis-logo.png"></div><div class="chat-body"><div class="chat-message">Ich habe deine Frage leider nicht verstanden. Bitte eine Frage auswählen oder deine Frage noch mal formulieren!</div></div></li>')
+          $('#msg-list').append('<form class= "choose" method ="POST" action = {%url "chat"%} id = "chatcheck2" >{% csrf_token %}<button class="choosebut bttn-unite bttn-md bttn-warning" type="submit">'+response.rep+'?</button></form>'); 
+          $('#msg-list').append('<form class= "choose2" method ="POST" action = {%url "chat"%} id = "chatcheck2" >{% csrf_token %}<button class="choosebut bttn-unite bttn-md bttn-warning" type="submit">'+response.rep2+'?</button></form>');
+         
+                  
+
+  $('.choose').on('submit', function(e){
+    e.preventDefault();
+
+    var thisform= $(this)
+    var actionEndpoint=thisform.attr("action");
+    var httpMethod=thisform.attr("method");
+    var formData= thisform.serialize();
+
+    $.ajax({
+        url:actionEndpoint,
+        method:httpMethod,
+        data:{'msgbox' : $('.choose').text()},
+        success: function(response){
+          if(response.rep.length >200)
+          {
+            rep1='<li class="recived"><div class="avatar"><img alt="Avatar" src="https://static.wiwi.uni-due.de/user-upload/iis-logo.png"></div><div class="chat-body"><div class="chat-message hover">'+response.rep+'</div</li>';
+          }
+          else
+          {
+            rep1='<li class="recived"><div class="avatar"><img alt="Avatar" src="https://static.wiwi.uni-due.de/user-upload/iis-logo.png"></div><div class="chat-body"><div class="chat-message">'+response.rep+'</div></div></li>';
+          }
+          if (response.rep2==null)
+          {
+            $('#msg-list').append(rep1);
+          }
+          else
+          {
+          console.log("success")
+          console.log(response)
+          $('#msg-list').append(rep1);
+          $('#chat-msg').val('');
+          $("#msg-list").animate({ scrollTop: $('#msg-list').prop("scrollHeight")}, 1000);
+          }
+        },
+        error: function(errordata){
+          console.log("Error", errordata)
+        }
+        })
+    });
+    
+
+    $('.choose2').on('submit', function(e){
+      e.preventDefault();
+      var thisform= $(this)
+      var actionEndpoint=thisform.attr("action");
+      var httpMethod=thisform.attr("method");
+      var formData= thisform.serialize();
+
+      $.ajax({
+          url:actionEndpoint,
+          method:httpMethod,
+          data:{'msgbox' : $('.choose2').text()},
+          success: function(response){
+            console.log("success")
+            console.log(response)
+
+            if(response.rep.length >200 )
+            {
+              rep1='<li class="recived"><div class="avatar"><img alt="Avatar" src="https://static.wiwi.uni-due.de/user-upload/iis-logo.png"></div><div class="chat-body"><div class="chat-message hover">'+response.rep+'</div</li>';
+            }
+            else
+            {
+              rep1='<li class="recived"><div class="avatar"><img alt="Avatar" src="https://static.wiwi.uni-due.de/user-upload/iis-logo.png"></div><div class="chat-body"><div class="chat-message">'+response.rep+'</div></div></li>';
+            }
+            if (response.rep2==null)
+            {
+              $('#msg-list').append(rep1);
+            }
+            else
+            {
+            $('#msg-list').append(rep1);
+            $('#hover').mouseenter(function () { scrollTop: $('#msg-list').prop("scrollHeight")}, 1000);
+            $('#chat-msg').val('');
+            $("#msg-list").animate({ scrollTop: $('#msg-list').prop("scrollHeight")}, 1000);
+          }},
+          error: function(errordata){
+            console.log("Error", errordata)
+          }
+        })
+     });
+            }  
+            $('#chat-msg').val('');
+            $("#msg-list").animate({ scrollTop: $('#msg-list').prop("scrollHeight")}, 1000);
+            
+          }},
+            error: function(errordata){
+            console.log("Error", errordata)
+              }
+          })
+        });
+ 
+    });
+
+</script>   
+{% endblock js %}
