@@ -3,7 +3,6 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponse, JsonResponse
-import dialogflow_v2 as dialogflow
 import os
 import pandas as pd
 from django import template
