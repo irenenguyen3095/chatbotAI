@@ -87,7 +87,7 @@
         "context": [""]
         },
         {"tag":"Zertifikat Kosten",
-        "patterns":["Entstehen durch das SAP Zertifikat weitere Kosten", " Wie teuer ist die SAP Zertifizierung", " Muss für die Prüfung etwas zusätzlich gezahlt werden"],
+        "patterns":["Entstehen durch das SAP Zertifikat weitere Kosten", "Wie teuer ist die SAP Zertifizierung", "Muss für die Prüfung etwas zusätzlich gezahlt werden"],
         "responses":["Ja, die Prüfung kostet bei einer Buchung über ES4Students nur 100€ zusätzlich."],
         "context": [""]
         },
@@ -97,7 +97,7 @@
         "context": [""]
         },
         {"tag":"Ziel",
-        "patterns":["Was ist das Ziel des Kurses", " Ist der Kurs für mich geeignet", "Für wen ist der Kurs geeignet", " Für wen ist der Kurs relevant"],
+        "patterns":["Was ist das Ziel des Kurses", "Ist der Kurs für mich geeignet", "Für wen ist der Kurs geeignet", " Für wen ist der Kurs relevant"],
         "responses":["Das Ziel des Kurses „SAP Beraterzertifikat TS410“ ist es das grundlegende Wissen des ERP-Systems SAP S4/HANA zu erlernen. Dazu gehört das grundlegende Verständnis wie das System zu bedienen ist, die Grundkonzepte der SAP hinter dem System und die wichtigsten Standardprozesse und -prozessbereiche. Diese sind für viele Branchen anwendbar."],
         "context": [""]
         },

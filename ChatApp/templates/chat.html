@@ -56,7 +56,7 @@
       data:{ 'msgbox' : $('#chat-msg').val() },
       success: function(response){
         if($('#chat-msg').val()==""){
-          $('#msg-list').append('<div id="alert1" class="alert alert-success">Bitte deine Frage eingeben!</div>');
+          $('#msg-list').append('<div id="alert1" class="alert alert-secondary">Bitte deine Frage eingeben!</div>');
         }
         else{
         if(response.rep.length >200){

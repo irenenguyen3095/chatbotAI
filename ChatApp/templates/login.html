@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
   <link rel="stylesheet" type="text/css" href="{% static 'ChatApp/css/login.css'%}">
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 
@@ -29,15 +30,15 @@
         {% csrf_token %}
          <div class="login-form">
            <label class="field ">
-              <input type = 'text 'class="field__input a-field__input" placeholder="e.g. Melnikov" name='username' required>
+              <input type = 'text 'class="field__input input_wrap" placeholder="Uni account" name='username' required>
                 <span class="field_label_wrap">
-                  <span class="a-field__label">Benutzername</span>
+                  <span class="input_label">Benutzername</span>
                 </span>
           </label>  
             <label class="field ">
-              <input type = 'password'class="field__input a-field__input" placeholder="e.g. Melnikov" name ='password'required>
+              <input type = 'password'class="field__input input_wrap" placeholder="Uni account password" name ='password'required>
                 <span class="field_label_wrap">
-                  <span class="a-field__label">Passwort</span>
+                  <span class="input_label">Passwort</span>
                 </span>
             </label>  
         </div>

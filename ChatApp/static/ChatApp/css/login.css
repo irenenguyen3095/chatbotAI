@@ -89,12 +89,12 @@ html, body {
   display: inline-block;
 }
 
-.a-field__input{ 
+.input_wrap{ 
   display: block;
   box-sizing: border-box;
 }
 
-.a-field__input:focus{
+.input_wrap:focus{
   outline: none;
 }
 
@@ -116,33 +116,33 @@ html, body {
   padding-top: 1em;  
 }
 
-.field .a-field__input{
+.field .input_wrap{
   height: var(--uiFieldHeight);
   padding: 0 var(--uiFieldPaddingRight) 0 var(--uiFieldPaddingLeft);
   border-bottom: var(--uiFieldBorderWidth) solid var(--uiFieldBorderColor);  
 }
 
-.field .a-field__input::-webkit-input-placeholder{
+.field .input_wrap::-webkit-input-placeholder{
   opacity: 0;
   transition: opacity .2s ease-out;
 }
 
-.field .a-field__input::-moz-placeholder{
+.field .input_wrap::-moz-placeholder{
   opacity: 0;
   transition: opacity .2s ease-out;
 }
 
-.field .a-field__input:not(:placeholder-shown) ~ .field_label_wrap .a-field__label{
+.field .input_wrap:not(:placeholder-shown) ~ .field_label_wrap .input_label{
   opacity: 1;
   bottom: var(--uiFieldHeight);
 }
 
-.field .a-field__input:focus::-webkit-input-placeholder{
+.field .input_wrap:focus::-webkit-input-placeholder{
   opacity: 1;
   transition-delay: .2s;
 }
 
-.field .a-field__input:focus::-moz-placeholder{
+.field .input_wrap:focus::-moz-placeholder{
   opacity: 1;
   transition-delay: .2s;
 }
@@ -160,7 +160,7 @@ html, body {
   left: 0;
 }
 
-.field .a-field__label{
+.field .input_label{
   position: absolute;
   left: var(--uiFieldPaddingLeft);
   bottom: calc(50% - .5em);
@@ -173,7 +173,7 @@ html, body {
   will-change: bottom, opacity;
 }
 
-.field .a-field__input:focus ~ .field_label_wrap .a-field__label{
+.field .input_wrap:focus ~ .field_label_wrap .input_label{
   opacity: 1;
   bottom: var(--uiFieldHeight);
 }
@@ -194,7 +194,7 @@ html, body {
   transition: width .285s ease-out;
 }
 
-.a-field__input:focus ~ .field_label_wrap:after{
+.input_wrap:focus ~ .field_label_wrap:after{
   width: 100%;
 }
 
