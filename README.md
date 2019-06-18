@@ -5,11 +5,11 @@ This app was written in python, css and HTML.
 
 ## Technologies
 * python 3.7
-* django 2.2.2
   * sklearn
   * pandas
   * numpy
   * spacy
+* django 2.2.2
 * bootstrap 4.3.1
 * jQuery 3.4.1
 
