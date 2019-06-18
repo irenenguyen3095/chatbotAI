@@ -206,7 +206,7 @@
         "responses":["Der Zeitraum zur Einschreibung endet am: 20.06.2019.“"],
         "context": [""]
         },
-        {"tag":"Bereichen",
+        {"tag":"Bereich",
         "patterns":["In welchen Bereichen bieten Sie Kurse an","Bieten Sie weitere Kurse an","Was gibt es noch für Kurse","Wie sind die Karriereoptionen","Welche Karriereoptionen bieten Sie","Welche Karriereoptionen sind möglich"],
         "responses":["Wir bieten eine breite Anzahl an Kursen an, die Sie auf Ihren beruflichen Weg zu einem SAP Anwender, SAP Berater, SAP Entwickler und SAP Analyst unterstützen"],
         "context": [""]
