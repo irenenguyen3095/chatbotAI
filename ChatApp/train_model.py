@@ -42,7 +42,7 @@ def tokenizer(text):
 
 #load file chat
 import json
-with open('/Users/saturn/chat/intent.json') as json_data:
+with open('/Users/saturn/Documents/GitHub/chatbotAI/intent.json') as json_data:
     intents = json.load(json_data)
     
 #load list of german stopwords
@@ -151,14 +151,15 @@ def predict(text):
             prob= prob.sort_values(by=['accuracy'], ascending=False)
             prob=prob.reset_index(drop=True)
             print(prob['accuracy'][0])
+            print(prob['tag'][0])
             print(prob['accuracy'][1])
+            print(prob['tag'][1])
             if (prob['accuracy'][0] - prob['accuracy'][1])< 0.4:
                 replies=[]
                 for intent in intents['intents']:
                     if intent['tag']== prob['tag'][0] or intent['tag']== prob['tag'][1] :
                         replies.append(random.choice(intent['patterns']))
                 return replies
-                print(replies)
             else:
                 tag=prob['tag'][0]
                 for intent in intents['intents']:

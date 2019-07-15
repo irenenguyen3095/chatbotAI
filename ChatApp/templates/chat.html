@@ -23,8 +23,8 @@
   {% csrf_token %}
     <div class="bottom_container clearfix">
       <div class="message_container">
-        <input name="mesbox" id = "chat-msg" type="text" placeholder="Deine Frage hier eingeben!" class="message_input effect" autocomplete="off">
-          <span class="focus-border"></span>
+        <input name="messbox" id = "chat-msg" type="text" placeholder="Deine Frage hier eingeben!" class="message_input " autocomplete="off">
+          <!-- <span class="focus-border"></span> -->
       </div>
         <button type = "submit" class="sendmess bttn-pill bttn-md bttn-primary">SEND</button>
     </div>
@@ -67,7 +67,7 @@
         }
         console.log("success")
         console.log(response)
-        $('#msg-list').append('<li class="sent"><div class="avatar2"><img alt="Avatar" src="https://image.flaticon.com/icons/svg/260/260253.svg"></div><div class="chat-body"><div class="chat-message">'+response.msg+'</div></div></li>');
+        $('#msg-list').append('<li class="sent"><div class="avatar2"><img alt="Avatar" src="https://image.flaticon.com/icons/svg/236/236846.svg"></div><div class="chat-body"><div class="chat-message">'+response.msg+'</div></div></li>');
         if (response.rep2 ==null){
           $('#msg-list').append(rep1);
         }
