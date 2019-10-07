@@ -1,6 +1,6 @@
 
 # chatbotAI
-ChatbotAI is a project, which was created using deep learning methods to automatically answer the questions about the SAP course at university Duisburg-Essen. 
+ChatbotAI is a project, which was created using SVM to automatically answer questions about the SAP course at university Duisburg-Essen. 
 This app was written in python, css and HTML.
 
 ## Technologies
