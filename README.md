@@ -1,6 +1,6 @@
 
 # chatbotAI
-ChatbotAI is a project, which was created using SVM to automatically answer questions about an SAP course. 
+This is a chatbot using SVM to automatically answer questions about an SAP course.
 
 
 ## Technologies
