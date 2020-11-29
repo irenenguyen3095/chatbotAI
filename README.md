@@ -1,6 +1,5 @@
 
 # chatbotAI
-This is a chatbot using SVM to answer questions about an SAP course.
 
 
 ## Technologies
